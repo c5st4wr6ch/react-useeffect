@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import Thumbnail from '../components/Thumbnail';
 
 export default function Cart(props) {
 	const [items, setItems] = useState([]);
 	const [total, setTotal] = useState(0);
 
-	const addItem = () => {
-		setItems([
-			...items,
-			{ item: 'dress', price: 90000 }
-		])
-	}
+	// useMemo
+	// const total = useMemo(
+	// 	() => items.reduce((currentTotal, item) => {
+	// 		return currentTotal + item.price;
+	// 	}, 0),
+	// 	[items]
+	// )
 
 	useEffect (() => {
 		setTotal(
@@ -19,6 +20,13 @@ export default function Cart(props) {
 			}, 0
 		)
 	)}, [items]);
+
+	const addItem = () => {
+		setItems([
+			...items,
+			{ item: 'dress', price: 90000 }
+		])
+	}
 
   return (
     <div>
