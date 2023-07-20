@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import logo from './logo.svg';
 import Video from './components/Video';
+import Cart from './components/Cart';
 import './App.css';
 
 function App() {
@@ -19,13 +20,19 @@ function App() {
         >
           Learn React
         </a> */}
-
-        <Video
+        {/* <Video
           video={{
             url:"https://www.youtube.com/watch?v=gsRmtm-ilNY",
             id: "gsRmtm-ilNY",
           }}
-        />
+        /> */}
+
+        {/* example useMemo */}
+        <Cart />
+
+
+
+
       {/* </header> */}
     </div>
   );

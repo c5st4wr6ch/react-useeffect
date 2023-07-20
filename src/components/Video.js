@@ -6,8 +6,11 @@ export default function Video({ video }) {
   return (
     <div>
       {/* <Thumbnail video={video} /> */}
-			<iframe width="420" height="315"
-			src={video_url}>
+			<iframe
+				title="youtube"
+				width="420"
+				height="315"
+				src={video_url}>
 			</iframe>
       {/* <a href={video.url}>
         <h3>{video.title}</h3>
